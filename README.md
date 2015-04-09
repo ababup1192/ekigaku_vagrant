@@ -8,7 +8,7 @@ Vagrant    - https://www.vagrantup.com
 
 Add a Ubuntu box image from Vagrantbox List.
 Vagrantbox List - http://www.vagrantbox.es
-(e.g. Ubuntu14.04 - https://github.com/kraksoft/vagrant-box-ubuntu/releases/download/14.04/ubuntu-14.04-amd64.box)
+(e.g. Ubuntu14.04 - https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box)
 
     vagrant box add ubuntu-14.04 https://github.com/kraksoft/vagrant-box-ubuntu/releases/download/14.04/ubuntu-14.04-amd64.box
 
