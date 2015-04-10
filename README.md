@@ -7,10 +7,14 @@ Vagrant    - https://www.vagrantup.com
 
 
 Add a Ubuntu box image from Vagrantbox List.
-Vagrantbox List - http://www.vagrantbox.es
-(e.g. Ubuntu14.04 - https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box)
+Vagrantbox List 
 
-    vagrant box add ubuntu-14.04 https://github.com/kraksoft/vagrant-box-ubuntu/releases/download/14.04/ubuntu-14.04-amd64.box
+- http://www.vagrantbox.es
+- https://atlas.hashicorp.com/boxes/search?utf8=✓&sort=&provider=&q=ubuntu+14.04
+
+(e.g. Ubuntu14.04 - http://sourceforge.net/projects/flowboard-vagrant-boxes/files/ubuntu-14.04-64bit-chef-2014-05-05.box/download?use_mirror=cznic)
+
+    vagrant box add ubuntu-14.04 ubuntu-14.04-64bit-chef-2014-05-05.box
 
 
 Clone this repository, and change directory.
