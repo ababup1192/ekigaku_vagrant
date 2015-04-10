@@ -1,3 +1,6 @@
+# Remove files
+rm chef_install.sh test
+
 # Install packges
 apt-get update && apt-get install -y software-properties-common
 add-apt-repository ppa:git-core/ppa && add-apt-repository ppa:pi-rho/dev
