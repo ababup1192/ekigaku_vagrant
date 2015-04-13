@@ -12,10 +12,9 @@ Vagrantbox List
 - http://www.vagrantbox.es
 - https://atlas.hashicorp.com/boxes/search?utf8=✓&sort=&provider=&q=ubuntu+14.04
 
-(e.g. Ubuntu14.04 - http://sourceforge.net/projects/flowboard-vagrant-boxes/files/ubuntu-14.04-64bit-chef-2014-05-05.box/download?use_mirror=cznic)
+(e.g. Ubuntu14.04 - https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box)
 
-    vagrant box add ubuntu-14.04 ubuntu-14.04-64bit-chef-2014-05-05.box
-
+    vagrant box add ubuntu-14.04 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
 
 Clone this repository, and change directory.
 
@@ -32,3 +31,4 @@ Access vagrant environment.
 Stop virtual machine.
 
     vagrant halt
+
