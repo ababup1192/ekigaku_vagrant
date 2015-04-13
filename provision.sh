@@ -8,12 +8,6 @@ apt-get update && apt-get install -y openssh-server zsh vim git curl autoconf ta
     sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev \
     python-software-properties libffi-dev tmux
 
-echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | \
-    debconf-set-selections
-
-add-apt-repository ppa:webupd8team/java && apt-get update
-apt-get install -y oracle-java8-installer && rm -rf /var/lib/apt/lists/*
-
 # Change shell to zsh
 chsh -s /bin/zsh vagrant
 
