@@ -4,6 +4,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # ベースイメージ
   config.vm.box = "ubuntu-14.04"
 
+  # ホスト名
+  config.vm.hostname = "sccp-dev-env"
+
   # 共有フォルダ
   config.vm.synced_folder "work_space/", "/home/vagrant/work_space"
 
