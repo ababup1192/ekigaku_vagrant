@@ -22,8 +22,8 @@ su - vagrant -c "git clone git://github.com/sstephenson/rbenv.git /home/vagrant/
     git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build && \
     exec /bin/zsh"
 
-su - vagrant -c "rbenv install 2.0.0-p643 && rbenv global 2.0.0-p643" && \
-    echo "gem: --no-ri --no-rdoc" > ~/.gemrc && /bin/zsh -c "gem install bundler"
+su - vagrant -c "rbenv install 2.0.0-p643 && rbenv global 2.0.0-p643 && \
+    echo \"gem: --no-ri --no-rdoc\" > ~/.gemrc && gem install bundler"
 
 su - vagrant -c "gem install rubocop refe2 && bitclust setup"
 
