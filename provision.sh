@@ -8,8 +8,9 @@ add-apt-repository ppa:git-core/ppa && add-apt-repository ppa:pi-rho/dev
 apt-get update && apt-get install -y openssh-server zsh vim git curl autoconf tar wget \
     zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev \
     sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev \
-    python-software-properties libffi-dev tmux python-software-properties \
-    software-properties-common postgresql-9.4 postgresql-client-9.4 postgresql-contrib-9.4
+    software-properties-common postgresql-9.4 postgresql-client-9.4 postgresql-contrib-9.4 \
+    postgresql-server-dev-9.4 libpq-dev python-software-properties \
+    libffi-dev tmux python-software-properties
 
 # Change shell to zsh
 chsh -s /bin/zsh vagrant
@@ -37,7 +38,6 @@ su - vagrant -c "wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh"
 su - postgres -c "/etc/init.d/postgresql start &&\
         psql --command \"CREATE USER vagrant WITH SUPERUSER PASSWORD 'vagrant';\" &&\
             createdb -O vagrant vagrant"
-
 echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/9.4/main/pg_hba.conf
 echo "listen_addresses='*'" >> /etc/postgresql/9.4/main/postgresql.conf
 

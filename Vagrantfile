@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   # ポート設定
-  config.vm.network "forwarded_port", guest: 9393, host: 9393
+  config.vm.network "forwarded_port", guest: 9292, host: 9292
   config.vm.network "forwarded_port", guest: 5432, host: 5432
 
 end
