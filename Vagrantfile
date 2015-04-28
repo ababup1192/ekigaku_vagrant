@@ -17,8 +17,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
- 
+
   # ポート設定
-  config.vm.network "forwarded_port", guest: 9393, host: 9393 
+  config.vm.network "forwarded_port", guest: 9393, host: 9393
+  config.vm.network "forwarded_port", guest: 5432, host: 5432
 
 end
