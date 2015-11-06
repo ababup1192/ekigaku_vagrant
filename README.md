@@ -1,4 +1,4 @@
-# SCCP development environment
+# Ekigaku development environment
 
 ## Install tools
 
