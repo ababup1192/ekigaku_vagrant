@@ -15,11 +15,16 @@ apt-get update && apt-get install -y openssh-server zsh vim git curl autoconf ta
 # Change shell to zsh
 chsh -s /bin/zsh vagrant
 
-su - vagrant -c "curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh"
-su - vagrant -c "git clone --recursive https://github.com/sorin-ionescu/prezto.git /home/vagrant/.zprezto && \
-  git clone https://github.com/ababup1192/dotfiles.git /tmp/dotfiles && \
-  cp -r /tmp/dotfiles/.??* /home/vagrant"
+su - vagrant -c "curl -fLo ~/.zplug/zplug --create-dirs https://git.io/zplug"
+
+su - vagrant -c "git clone https://github.com/ababup1192/dotfiles.git /tmp/dotfiles && \
+                      cp -r /tmp/dotfiles/.??* /home/vagrant"
+
 rm -rf /var/tmp/dotfiles
+
+# Install vim-plug
+su - vagrant -c "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 
 # Install ruby
 su - vagrant -c "git clone git://github.com/sstephenson/rbenv.git /home/vagrant/.rbenv && \
